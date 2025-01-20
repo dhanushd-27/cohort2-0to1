@@ -1,19 +1,28 @@
-import { env } from "@/env";
-import Link from "next/link";
-import { CheckIcon } from "../../components/Icon/CheckIcon";
-import { api } from "@/api";
+// import { env } from "@/env";
+// import Link from "next/link";
+// import { CheckIcon } from "../../components/Icon/CheckIcon";
+// import { api } from "@/api";
+"use client"
+import { PolarEmbedCheckout } from '@polar-sh/checkout/embed'
+import { useEffect } from 'react'
 
-export default async function Home() {
-	const { result } = await api.products.list({
-		organizationId: env.POLAR_ORGANIZATION_ID,
-		isArchived: false,
-	});
+
+export default function Home() {
+	// const { result } = await api.products.list({
+	// 	organizationId: env.POLAR_ORGANIZATION_ID,
+	// 	isArchived: false,
+	// });
+
+	useEffect(() => {
+    PolarEmbedCheckout.init()
+  }, [])
+
 
 	return (
 		<div className="flex flex-col gap-y-32">
 			<h1 className="text-5xl">Products</h1>
 			<div className="grid grid-cols-4 gap-12">
-				{result.items.map((product) => (
+				{/* {result.items.map((product) => (
 					<div
 						key={product.id}
 						className="flex flex-col gap-y-24 justify-between p-12 rounded-3xl bg-neutral-950 h-full border border-neutral-900"
@@ -49,7 +58,14 @@ export default async function Home() {
 							</span>
 						</div>
 					</div>
-				))}
+				))} */}
+				<a
+					href="https://sandbox-api.polar.sh/v1/checkout-links/polar_cl_k5PE60HhUcvBwUlIwh36AcSoAgeahKhEnhAWs3yDZDR/redirect"
+					data-polar-checkout
+					data-polar-checkout-theme="dark"
+				>
+					Purchase
+				</a>
 			</div>
 		</div>
 	);

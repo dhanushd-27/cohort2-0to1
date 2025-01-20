@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@polar-sh/checkout": "^0.1.8",
 		"@polar-sh/nextjs": "^0.1.5",
 		"@polar-sh/sdk": "^0.17.1",
 		"@t3-oss/env-nextjs": "^0.11.1",
