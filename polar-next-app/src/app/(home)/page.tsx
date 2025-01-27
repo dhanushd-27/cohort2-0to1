@@ -59,13 +59,31 @@ export default function Home() {
 						</div>
 					</div>
 				))} */}
+
 				<a
-					href="https://sandbox-api.polar.sh/v1/checkout-links/polar_cl_k5PE60HhUcvBwUlIwh36AcSoAgeahKhEnhAWs3yDZDR/redirect"
+					href="https://sandbox-api.polar.sh/v1/checkout-links/polar_cl_7fUecLR4ULVnlM4xY1Mp4J8NKY4Ym52MJEbic2AEIck/redirect"
+					data-polar-checkout
+					data-polar-checkout-theme="light"
+					about=''
+					
+					draggable
+				>
+					Purchase
+				</a>
+				<script
+					src="https://cdn.jsdelivr.net/npm/@polar-sh/checkout@0.1/dist/embed.global.js"
+					defer
+					data-auto-init
+				></script>
+
+
+				{/* <a
+					href="https://sandbox-api.polar.sh/v1/checkout-links/polar_cl_n6LeCdVFfygNT4DgvOFPBH5WBXQRulpQU4mWl13XXQy/redirect"
 					data-polar-checkout
 					data-polar-checkout-theme="dark"
 				>
 					Purchase
-				</a>
+				</a> */}
 			</div>
 		</div>
 	);
