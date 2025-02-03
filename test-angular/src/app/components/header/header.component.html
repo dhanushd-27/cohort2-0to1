@@ -1,0 +1,18 @@
+<header class="flex justify-between items-center bg-gray-900 text-white p-4 shadow-md">
+  <!-- Organization Name with Router Link to Root Page -->
+  <h1 class="text-xl font-bold">
+    <a routerLink="/" class="hover:text-gray-300 transition">Orca</a>
+  </h1>
+
+  <!-- Navigation Links -->
+  <nav class="flex gap-6">
+    <a routerLink="/home" routerLinkActive="font-semibold underline" class="hover:text-gray-300 transition">
+      Home
+    </a>
+    <a routerLink="/todos" routerLinkActive="font-semibold underline" class="hover:text-gray-300 transition">
+      Todos
+    </a>
+  </nav>
+</header>
+
+<router-outlet />

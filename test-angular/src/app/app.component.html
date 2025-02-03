@@ -1,16 +1,2 @@
-<h1 class="text-4xl font-bold">{{ greetings() }}</h1>
-<app-greetings [greetings]="greetings()"/>
-
-<hr>
-
-<input type="text" (keypress)="increase()">
-
-<hr>
-
-<div class="flex gap-4 items-center">
-  <button class="bg-slate-400 p-2 rounded-md" (click)="increase()" >Increase</button>
-  <p>Count: {{ count() }}</p>
-  <button class="bg-slate-400 p-2 rounded-md" (click)="decrease()">Decrease</button>
-</div>
-
+<app-header />
 <router-outlet />
