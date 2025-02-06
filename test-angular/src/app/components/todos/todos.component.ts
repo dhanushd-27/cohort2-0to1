@@ -1,7 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { TodosService } from '../../todos.service';
-import { sign } from 'crypto';
-import { Todo } from '../../../model/todo.type';
+import { Todo } from '../../model/todo.type';
 import { catchError } from 'rxjs';
 
 @Component({
