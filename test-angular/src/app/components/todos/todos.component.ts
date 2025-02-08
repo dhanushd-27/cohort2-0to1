@@ -1,5 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
-import { TodosService } from '../../todos.service';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { TodosService } from '../../services/todos.service';
 import { Todo } from '../../model/todo.type';
 import { catchError } from 'rxjs';
 
@@ -9,7 +9,7 @@ import { catchError } from 'rxjs';
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.css'
 })
-export class TodosComponent {
+export class TodosComponent implements OnInit{
   todoService = inject(TodosService);
   todoItems = signal<Array<Todo>>([]);
 
